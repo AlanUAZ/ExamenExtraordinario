@@ -37,6 +37,12 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'Cliente',
+    'Empleado',
+    'Peliculas',
+    'Renta',
+    'DetalleRenta',
+    'Genero',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -76,8 +82,12 @@ WSGI_APPLICATION = 'ExamenExtraordinario.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'VideoClub',
+        'USER': 'video',
+        'PASSWORD': 'video',
+        'PORT': '3307',
+        'HOST': 'localhost',
     }
 }
 
@@ -85,7 +95,7 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-mx'
 
 TIME_ZONE = 'UTC'
 
