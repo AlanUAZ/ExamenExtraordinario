@@ -2,7 +2,7 @@
 from django import forms
 from Peliculas.models import Peliculas
 
-class PeliculasForm(forms.models.Model):
+class PeliculasForm(forms.ModelForm):
 	"""Formulario para dar servicio al modelo Peliculas"""
 
 	class Meta(object):

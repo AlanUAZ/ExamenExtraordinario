@@ -13,4 +13,4 @@ class Peliculas(models.Model):
 	genero = models.ForeignKey(Genero)
 
 	def __unicode__(self):
-		return self.titulo + " " + self.genero
+		return self.titulo + " " + self.sinopsis

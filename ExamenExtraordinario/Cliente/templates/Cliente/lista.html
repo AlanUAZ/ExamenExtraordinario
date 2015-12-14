@@ -1,0 +1,26 @@
+<div>
+	<title>Lista de Clientes</title>
+		<div class="col-md-11">
+			<h2 class="panel-title text-center">Clientes</h2>
+		</div>
+			<table class="table table-striped">
+				<tr>
+					<th class="text-center">Nombre</th>
+						<th>Apellido</th>
+						<th>Domicilio</th>
+						<th>RFC</th>
+						<th>Telefono</th>
+						<th>E-mail</th>
+				</tr>
+				{% for empleados in Empleado %}
+					<tr>
+						<td>{{empleados.user.first_name}}</td>
+						<td>{{empleados.user.last_name}}</td>
+						<td>{{empleados.domicilio}}</td>
+						<td>{{empleados.rfc}}</td>
+						<td>{{empleados.telefono}}</td>
+						<td>{{empleados.user.email}}</td>
+					</tr>
+				{% endfor %}
+			</table>
+</div>

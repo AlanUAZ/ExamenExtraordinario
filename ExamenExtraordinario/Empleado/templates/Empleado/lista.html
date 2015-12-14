@@ -1,0 +1,22 @@
+<div>
+	<title>Lista de Empleados</title>
+		<div class="col-md-11">
+			<h2 class="panel-title text-center">Empleados</h2>
+		</div>
+			<table class="table table-striped">
+				<tr>
+					<th class="text-center">Nombre</th>
+						<th>Apellido</th>	
+						<th>RFC</th>
+						<th>E-mail</th>
+				</tr>
+				{% for empleados in Empleado %}
+					<tr>
+						<td>{{empleados.user.first_name}}</td>
+						<td>{{empleados.user.last_name}}</td>
+						<td>{{empleados.rfc}}</td>
+						<td>{{empleados.user.email}}</td>
+					</tr>
+				{% endfor %}
+			</table>
+</div>
