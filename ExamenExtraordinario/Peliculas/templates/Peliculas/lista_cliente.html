@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>Peliculas</title>
+</head>
+<body>
+	<div>
+		<h1>Lista de Peliculas</h1>
+		{% for pelicula in Peliculas %}
+			<h3>{{pelicula.titulo}}</h3>
+			<ul>				
+				<li>Clave: {{pelicula.clave}}</li>
+				<li>Duracion: {{pelicula.duracion}}</li>
+				<li>Sinopsis: {{pelicula.sinopsis}}</li>
+				<li>Genero: {{pelicula.genero}}</li>
+				<li>Clasificacion: {{pelicula.clasificacion}}</li>
+				<input type="checkbox" name="pelicula" value="{{pelicula.id}}"/>Rentar
+			</ul>
+			<hr>
+			<br>
+		{% endfor %}
+		<input type="button" name="rentar" id="btnrentar" value="Rentar"/>
+	</div>
+</body>
+</html>

@@ -6,9 +6,9 @@ from Genero.models import Genero
 
 class Peliculas(models.Model):
 	clave = models.CharField(max_length=10)
-	titulo = models.CharField(max_length=15)
+	titulo = models.CharField(max_length=30)
 	duracion = models.CharField(max_length=10)
-	sinopsis = models.CharField(max_length=25)
+	sinopsis = models.CharField(max_length=40)
 	clasificacion = models.CharField(max_length=5)
 	genero = models.ForeignKey(Genero)
 

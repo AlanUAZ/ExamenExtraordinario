@@ -5,7 +5,7 @@ from Cliente.models import Cliente
 # Create your models here.
 
 class Renta(models.Model):
-	fecha = models.CharField(max_length=10)
+	fecha = models.DateField('Fecha de renta')
 	cliente =  models.ForeignKey(Cliente)
 
 	def __unicode__(self):

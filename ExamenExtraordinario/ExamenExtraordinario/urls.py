@@ -21,4 +21,6 @@ urlpatterns = [
     url(r'^Peliculas/', include('Peliculas.urls')),
     url(r'^Empleado/', include('Empleado.urls')),
     url(r'^Cliente/', include('Cliente.urls')),
+    url(r'^Renta/', include('Renta.urls')),
+    url(r'^DetalleRenta/', include('DetalleRenta.urls')),
 ]

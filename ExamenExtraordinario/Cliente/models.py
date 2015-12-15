@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 
 class Cliente(models.Model):
     user = models.OneToOneField(User)
-    domicilio = models.CharField(max_length=15)
+    domicilio = models.CharField(max_length=40)
     rfc = models.CharField(max_length=13)
     telofono = models.CharField(max_length=10)
 

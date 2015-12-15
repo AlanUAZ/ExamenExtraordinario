@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title>Detalles</title>
+</head>
+<body>
+	<div>
+		<h1>Lista de Detalles</h1>		
+		{% for detalle in detalles %}			
+			<h3>{{detalle.renta.cliente.user.first_name}}</h3>
+			<ul>
+				<li>Pelicula: {{detalle.pelicula.titulo}}</li>
+				<li>Fecha de la renta: {{detalle.renta.fecha}}</li>
+				<li>Fecha de entrega: {{detalle.fechaentrega}}</li>
+			</ul>
+			<hr>
+			<br>			
+		{% endfor %}
+	</div>
+</body>
+</html>

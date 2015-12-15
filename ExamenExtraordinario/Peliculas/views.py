@@ -5,7 +5,7 @@ from Peliculas.forms import PeliculasForm
 # Create your views here.
 def listar(request):
 	peliculas = Peliculas.objects.all()
-	return render(request, 'Peliculas/lista.html', {'Peliculas':peliculas})
+	return render(request, 'Peliculas/lista_empleado.html', {'Peliculas':peliculas})
 
 def agregar(request):
 	if request.method == "POST":

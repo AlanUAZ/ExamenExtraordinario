@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title>Rentas</title>
+</head>
+<body>
+	<div>
+		<h1>Lista de Rentas</h1>
+		{% csrf_token %}
+			{% for renta in rentas %}
+				<h3>{{renta.cliente}}</h3>
+				<ul>
+					<li>{{renta.fecha}}</li>
+				</ul>
+				<hr>
+				<br>
+			{% endfor %}
+		<button onclick="window.location='{% url "listar" %}'" name = "lista_detalle">Mostrar Detalles</button>
+	</div>
+</body>
+</html>

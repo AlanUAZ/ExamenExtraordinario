@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>Peliculas</title>
+</head>
+<body>
+	<div>
+		<h1>Lista de Peliculas</h1>
+		<button type="submit" id="btnagregar" onclick="window.location='{% url "agregar" %}'">Agregar Pelicula</button>
+		{% for pelicula in Peliculas %}
+			<h3>{{pelicula.titulo}}</h3>
+			<ul>				
+				<li>Clave: {{pelicula.clave}}</li>
+				<li>Duracion: {{pelicula.duracion}}</li>
+				<li>Sinopsis: {{pelicula.sinopsis}}</li>
+				<li>Genero: {{pelicula.genero}}</li>
+				<li>Clasificacion: {{pelicula.clasificacion}}</li>
+			</ul>
+			<a href = "javascript: if(confirm('Deseas editar {{pelicula}}??')) window.location='{% url "editar" pk=pelicula.id %}'"> Editar</a>
+			<a href = "javascript: if(confirm('Deseas eliminar {{pelicula}}??')) window.location='{% url "eliminar" pk=pelicula.id %}'"> Eliminar</a>
+			<hr>
+			<br>
+		{% endfor %}
+	</div>
+</body>
+</html>

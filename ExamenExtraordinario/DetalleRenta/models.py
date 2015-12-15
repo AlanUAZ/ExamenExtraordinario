@@ -7,7 +7,7 @@ from Peliculas.models import Peliculas
 
 class DetalleRenta(models.Model):
 	pelicula =  models.ForeignKey(Peliculas)
-	fechaentrega = models.CharField(max_length=10)
+	fechaentrega = models.DateField('Fecha de entrega')
 	renta = models.ForeignKey(Renta)
 
 	def __unicode__(self):
